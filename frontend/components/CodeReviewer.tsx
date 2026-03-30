@@ -39,6 +39,8 @@ export default function CodeReviewer() {
       reader.readAsText(file);
   };
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
   const handleReview = async () => {
     if (!code.trim()) return;
     
@@ -47,7 +49,7 @@ export default function CodeReviewer() {
     setReview("");
 
     try {
-      const response = await fetch("http://localhost:8000/api/review", {
+      const response = await fetch(`${API_URL}/api/review`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code, language })
