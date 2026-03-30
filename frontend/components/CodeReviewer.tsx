@@ -1,4 +1,5 @@
 "use client";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 import { useState } from "react";
 
@@ -38,8 +39,6 @@ export default function CodeReviewer() {
       };
       reader.readAsText(file);
   };
-
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
   const handleReview = async () => {
     if (!code.trim()) return;
