@@ -18,3 +18,14 @@ frontend/.env.production.local
 # OS specific
 .DS_Store
 Thumbs.db
+
+node_modules/
+out/
+*.js.map
+frontend/.next/
+frontend/out/
+backend/venv/
+backend/.env
+*.vsix
+frontend/**/*.js
+frontend/**/*.js.map
