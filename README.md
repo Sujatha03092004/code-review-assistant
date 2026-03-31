@@ -30,18 +30,16 @@ One backend, three clients:
 ## Run Locally
 
 ### Backend
-cd backend
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn main:app --reload
+- > cd backend
+- > py -3.11-64 -m venv venv
+- > venv\Scripts\activate
+- > pip install -r requirements.txt
+- > uvicorn main:app --reload
 
 ### Frontend
-cd frontend
-npm install
-npm run dev
+- > cd frontend
+- > npm install
+- > npm run dev
 
-### Extension
-npm install
-npm run compile
-Press F5 in VS Code
+### Install Extension in VSCode
+Download the latest `.vsix` from [Releases](https://github.com/Sujatha03092004/code-review-assistant/releases)
